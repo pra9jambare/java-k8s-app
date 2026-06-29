@@ -4,6 +4,8 @@ pipeline {
     environment {
         IMAGE_NAME = "pranavjambare/java-k8s-app"
         TAG = "${BUILD_NUMBER}"
+	PATH = "/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
+
     }
     tools {
     	maven "Maven-3"
